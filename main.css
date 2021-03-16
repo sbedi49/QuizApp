@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #0984e3;
+  font-size: 62.5%;
+  font-family: "Poppins";
+}
+
+span {
+  position: absolute;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  color: white;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #6c5ce7;
+  border-radius: inherit;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main__header {
+  color: white;
+  font-size: 2rem;
+}
+
+.main__btn {
+  background-color: #81ecec;
+  font-family: "Poppins";
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.main__btn:hover {
+  background-color: rgba(129, 236, 236, 0.1);
+  color: white;
+  cursor: pointer;
+}
+
+.quiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.quiz__question {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.quiz__mcq__list {
+  list-style: none;
+}
+
+.quiz__mcq__list__item {
+  width: 30rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  background-color: white;
+  position: relative;
+}
+
+.timer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5rem;
+}
+
+.timer__clock, .timer__number {
+  font-size: 2rem;
+  color: white;
+  font-weight: 500;
+  font-family: monospace;
+  margin: 4rem;
+}
+
+.endgame {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */

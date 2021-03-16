@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div id="main" class="main">
+      <h1 class="main__header">Welcome to Quiz App</h1>
+      <h3 class="main__header2">
+        Ready to test your knowledge? Click the button below
+      </h3>
+      <button onclick="onClick()" class="main__btn">Get Started</button>
+    </div>
+    <div class="quiz">
+      <div class="timer">
+        <h4 class="timer__clock">0:00</h4>
+        <h4 id="count" class="timer__number">1/10</h4>
+      </div>
+      <h3 id="q" class="quiz__question">What is your favorite animal?</h3>
+      <div class="quiz__mcq">
+        <ul class="quiz__mcq__list">
+          <li class="quiz__mcq__list__item">
+            <span>A</span>
+          </li>
+          <li class="quiz__mcq__list__item"><span>B</span></li>
+          <li class="quiz__mcq__list__item"><span>C</span></li>
+          <li class="quiz__mcq__list__item"><span>D</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="endgame">
+      <h1 class="endgame__header">Quiz is Over</h1>
+      <div class="endgame__stats">
+        <h2 class="endgame__stats__score">Your Score:</h2>
+        <h2 class="endgame__stats__time">Time:</h2>
+      </div>
+      <button class="endgame__btn">Retry</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
