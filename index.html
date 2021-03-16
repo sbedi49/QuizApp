@@ -13,9 +13,9 @@
       <h3 class="main__header2">
         Ready to test your knowledge? Click the button below
       </h3>
-      <button onclick="onClick()" class="main__btn">Get Started</button>
+      <button onclick="startGame()" class="main__btn">Get Started</button>
     </div>
-    <div class="quiz">
+    <div id="quiz" class="quiz">
       <div class="timer">
         <h4 class="timer__clock">0:00</h4>
         <h4 id="count" class="timer__number">1/10</h4>
@@ -23,23 +23,23 @@
       <h3 id="q" class="quiz__question">What is your favorite animal?</h3>
       <div class="quiz__mcq">
         <ul class="quiz__mcq__list">
-          <li class="quiz__mcq__list__item">
+          <li class="quiz__mcq__list__item active">
             <span>A</span>
           </li>
-          <li class="quiz__mcq__list__item"><span>B</span></li>
-          <li class="quiz__mcq__list__item"><span>C</span></li>
-          <li class="quiz__mcq__list__item"><span>D</span></li>
+          <li class="quiz__mcq__list__item active"><span>B</span></li>
+          <li class="quiz__mcq__list__item active"><span>C</span></li>
+          <li class="quiz__mcq__list__item active"><span>D</span></li>
         </ul>
       </div>
     </div>
 
-    <div class="endgame">
+    <div id="endgame" class="endgame">
       <h1 class="endgame__header">Quiz is Over</h1>
       <div class="endgame__stats">
-        <h2 class="endgame__stats__score">Your Score:</h2>
+        <h2 id="finalScore" class="endgame__stats__score">Your Score:</h2>
         <h2 class="endgame__stats__time">Time:</h2>
       </div>
-      <button class="endgame__btn">Retry</button>
+      <button onclick="retry()" class="endgame__btn">Retry</button>
     </div>
     <script src="app.js"></script>
   </body>

@@ -77,11 +77,30 @@ span {
       list-style: none;
       &__item {
         width: 30rem;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         height: 4rem;
         border-radius: 0.5rem;
         margin: 1rem;
         background-color: white;
         position: relative;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: #6c5ce7;
+          cursor: pointer;
+          color: white;
+        }
+      }
+
+      &__item.right {
+        background-color: #55efc4;
+      }
+
+      &__item.wrong {
+        background-color: #d63031;
       }
     }
   }
@@ -106,4 +125,33 @@ span {
 
 .endgame {
   display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__header {
+    color: white;
+    font-weight: 600;
+    font-size: 2rem;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    color: white;
+
+    &__score {
+      margin: 1rem;
+    }
+
+    // &__time {
+    // }
+
+    &__btn {
+      color: #6c5ce7;
+    }
+  }
 }
