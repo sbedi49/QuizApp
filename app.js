@@ -3,21 +3,24 @@ const answers = [];
 const incorrect = [];
 const endgame = document.getElementById("endgame")
 const game = document.getElementById("quiz")
+const stats = document.getElementById("stats")
 const question = document.getElementById("q");
 const main = document.getElementById("main");
 const quiz = document.querySelectorAll("li");
 const qCount = document.getElementById("count");
 const finalScore = document.getElementById("finalScore")
-let questionCount = 0;
+const mcq = document.getElementById("mcq")
+let questionCount = 1;
 let correctCounter = 0;
 let answer = answers[questionCount]
+
 
 
 window.onload = loadData()
 
 
 async function loadData() {
-const response = await fetch("https://opentdb.com/api.php?amount=10&encode=url3986")
+const response = await fetch("https://opentdb.com/api.php?amount=10&type=multiple")
 const data = await response.json()
 const {results} = data
 
@@ -61,41 +64,38 @@ quiz.forEach(item => {item.addEventListener("click",
                 count();
                 startGame();
             }
-        })
-        })
+     })
+})
 
 const score = () => {
     correctCounter+=1
-    finalScore.innerText = "Final Score:" + correctCounter + "/10"
-
 }
 
 const count = () => {
-    questionCount +=1
+    questionCount ++;
     qCount.innerText = questionCount + "/10"
-    endGame();
-}
-
-
-// const timer = () => {
+    if (questionCount >= 10) {
+        endGame();
+    }
     
-// }
-
-
+}
 
 const endGame = () => {
-    if (questionCount === 10) {
-        game.style.display = "none"
-        endgame.style.display = "flex"
-    }
+    game.style.display= "none"
+    stats.style.display = "none"
+    q.style.display = "none"
+    mcq.style.display = "none"
+    endgame.style.display = "flex"
+    finalScore.innerText = "Final Score:" + correctCounter + "/10"
 }
 
-
 const retry = () => {
+    questionCount = 1
+    correctCounter = 0
+    qCount.innerText = questionCount + "/10"
     endgame.style.display ="none"
     main.style.display = "flex"
 }
-
 
 
 
