@@ -12,6 +12,7 @@ body {
 }
 
 .main {
+  margin: 10rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +26,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -61,7 +61,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -72,7 +71,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: none;
 }
 
 .quiz__question {
@@ -126,25 +124,27 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 5rem;
 }
 
-.timer__clock, .timer__number {
+.timer__number {
   font-size: 2rem;
   color: white;
   font-weight: 500;
   font-family: monospace;
-  margin: 4rem;
 }
 
 .endgame {
-  display: none;
+  margin-top: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -155,7 +155,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
 }
 
 .endgame__header {
@@ -182,7 +181,24 @@ body {
   margin: 1rem;
 }
 
-.endgame__stats__btn {
-  color: #6c5ce7;
+.endgame__btn {
+  background-color: #81ecec;
+  font-family: "Poppins";
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  -webkit-box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.endgame__btn:hover {
+  background-color: #0984e3;
+  color: white;
+  cursor: pointer;
 }
 /*# sourceMappingURL=main.css.map */

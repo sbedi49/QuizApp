@@ -15,9 +15,8 @@ let correctCounter = 0;
 let answer = answers[questionCount]
 
 
-
+//Load Data and Add it to array on window load
 window.onload = loadData()
-
 
 async function loadData() {
 const response = await fetch("https://opentdb.com/api.php?amount=10&type=multiple")
@@ -29,12 +28,12 @@ questions.push(result.question)
 answers.push(result.correct_answer)
 incorrect.push(result.incorrect_answers)
 })
-
 }
 
 const startGame = () => {
     main.style.display = "none"
     game.style.display = "flex"
+    
 //Get random integer to place answer
     let randomNum = Math.floor(Math.random() * 3) + 1
     question.innerText = questions[questionCount];
@@ -55,7 +54,7 @@ const startGame = () => {
 quiz.forEach(item => {item.addEventListener("click",
             () => {
             if ((item.innerText === answer)) {
-                score()
+                score();
                 count();
                 startGame();
                 
@@ -68,13 +67,15 @@ quiz.forEach(item => {item.addEventListener("click",
 })
 
 const score = () => {
-    correctCounter+=1
+    correctCounter++;
+    finalScore.innerText = "Final Score:" + correctCounter + "/10"
+
 }
 
 const count = () => {
     questionCount ++;
     qCount.innerText = questionCount + "/10"
-    if (questionCount >= 10) {
+    if (questionCount === 10) {
         endGame();
     }
     
@@ -82,20 +83,24 @@ const count = () => {
 
 const endGame = () => {
     game.style.display= "none"
+    endgame.style.display = "flex"
     stats.style.display = "none"
     q.style.display = "none"
     mcq.style.display = "none"
-    endgame.style.display = "flex"
-    finalScore.innerText = "Final Score:" + correctCounter + "/10"
 }
 
 const retry = () => {
     questionCount = 1
     correctCounter = 0
     qCount.innerText = questionCount + "/10"
-    endgame.style.display ="none"
+    endgame.style.display = "none"
     main.style.display = "flex"
 }
+
+
+
+
+
 
 
 
